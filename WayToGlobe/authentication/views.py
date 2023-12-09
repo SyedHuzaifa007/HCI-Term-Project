@@ -31,3 +31,4 @@ def signup_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'signup.html', {'form': form})
+
