@@ -285,27 +285,30 @@
             <div class="social-login">Login using social networks</div>
             <div class="separator" style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
                 {% load static %}
-            <img class="social-icon" src="{% static 'fb.png' %} alt="Social Icon 1">
+            <img class="social-icon" src="{% static 'fb.png' %}" alt="Social Icon 1">
             <div class="divider" style="left: 123.98px; top: 209.50px;"></div>
             <div class="divider" style="left: 312px; top: 210.55px;"></div>
             <div class="or-text">OR</div>
             <img class="social-icon" src="https://via.placeholder.com/48x48" alt="Social Icon 2">
         </div>
+        <form method="POST" action="{% url 'login' %}" autocomplete="off">
+            {% csrf_token  %}
             <div class="email-label">Email</div>
             <div class="email-input">
-                <input  style="font-size:x-large" type="text"  class="form-control" name="Username" id="Username" required>
+                <input  style="font-size:x-large" type="text"  class="form-control" name="{{ loginform.username.name }}" id="Username" required>
             </div>
             <div class="password-label">Password</div>
             <div class="password-input">
-                <input  style="font-size:x-large" type="password"  class="form-control" name="Username" id="Username" required></div>
-                <div class="forgot-password">Forgot Password?</div>
+                <input  style="font-size:x-large" type="password"  class="form-control" name="{{ loginform.password.name }}" id="Username" required></div>
+       
+                <div class="forgot-password"><a href="{% url 'password_reset' %}">Forgot Password?</a></div>
               
-                <div class="signin-button-container" >  
+              
                 </div>
-                <div class="signin-button"></div>
-                <p style="font-family: sans-serif;color:white;font-weight:300;margin-top: -40px;font-size: x-large;margin-left: 250px;">Sign in</p>
-            </div>
-            
+              
+                <input class="signin-button-container" type="submit" value="Sign in" style="font-family: sans-serif; font-weight: 700; background-color:#0062E3;color: white; font-weight: 300; margin-top: 250px; font-size: x-large; margin-left: 275px;height:60px;width:340px;">
+           
+        </form>
          
            
         </div>
