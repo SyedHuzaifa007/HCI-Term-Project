@@ -7,3 +7,5 @@ def mainterface_view(request):
 
 def searchcar_view(request):
     return render(request, 'search_car.html')
+def searchplace_view(request):
+    return render(request, 'search_place.html')

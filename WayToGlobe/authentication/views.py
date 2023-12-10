@@ -14,7 +14,7 @@ def login_view(request):
             user=authenticate(request,username=username,password=password)
             if user is not None:
                 auth.login(request,user)
-                return redirect('signup')
+                return redirect('main_interface')
     context={'loginform':form}
     return render(request, 'login.html',context=context)
 
@@ -42,3 +42,4 @@ def forgot(request):
     form = PasswordResetForm()
 
     return render(request, 'password_reset.html', {'form': form}) 
+
