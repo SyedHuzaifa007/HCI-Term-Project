@@ -283,13 +283,14 @@
         <div class="login-container">
             <div class="login-title">Login to Your Account</div>
             <div class="social-login">Login using social networks</div>
-            <div class="separator" style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
+            <div  style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
                 {% load static %}
-            <img class="social-icon" src="{% static 'fb.png' %}" alt="Social Icon 1">
+            <img class="social-icon" src="{% static 'fb.png' %}">
+            <img class="social-icon" style="margin-left: 200px;;" src="{% static 'gm.png' %}" alt="Social Icon 1">
             <div class="divider" style="left: 123.98px; top: 209.50px;"></div>
             <div class="divider" style="left: 312px; top: 210.55px;"></div>
             <div class="or-text">OR</div>
-            <img class="social-icon" src="https://via.placeholder.com/48x48" alt="Social Icon 2">
+          
         </div>
         <form method="POST" action="{% url 'login' %}" autocomplete="off">
             {% csrf_token  %}

@@ -283,35 +283,36 @@
         <div class="login-container">
             <div class="login-title">Create Your Account</div>
             <div class="social-login">Sign up using social networks</div>
-            <div class="separator" style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
+            <div style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
                 {% load static %}
             <img class="social-icon" src="{% static 'fb.png' %}" alt="Social Icon 1">
+            <img class="social-icon" style="margin-left: 200px;;" src="{% static 'gm.png' %}" alt="Social Icon 1">
             <div class="divider" style="left: 123.98px; top: 209.50px;"></div>
             <div class="divider" style="left: 312px; top: 210.55px;"></div>
             <div class="or-text">OR</div>
-            <img class="social-icon" src="https://via.placeholder.com/48x48" alt="Social Icon 2">
+       
         </div>
         <form method="POST" action="{% url 'signup' %}" autocomplete="off">
             {% csrf_token %}
             
-            <div class="email-label">Email</div>
-            <div class="email-input">
-                <input style="font-size: x-large" type="text" class="form-control" name="{{ registration.email.name }}" id="email" required>
+            <div class="email-label" >Email</div>
+            <div class="email-input" >
+                <input style="font-size: large;height:40px;" type="text" class="form-control" name="{{ registration.email.name }}" id="email" required>
             </div>
         
             <div class="email-label" style="margin-top: 100px; margin-left: 20px;">Username</div>
             <div class="email-input">
-                <input style="font-size: x-large; margin-top: 100px;" type="text" class="form-control" name="{{ registration.username.name }}" id="username" required>
+                <input style="font-size: large; margin-top: 100px;height:40px;" type="text" class="form-control" name="{{ registration.username.name }}" id="username" required>
             </div>
         
             <div class="password-label" style="margin-top: 70px; margin-left: 1px;">Password</div>
             <div class="password-input">
-                <input style="font-size: x-large; margin-top: 100px;" type="password" class="form-control" name="{{ registration.password1.name }}" id="password" required>
+                <input style="font-size: large; margin-top: 100px;height:40px;" type="password" class="form-control" name="{{ registration.password1.name }}" id="password" required>
             </div>
         
             <div class="password-label" style="margin-top: 150px; margin-left: 35px;">Confirm Password</div>
             <div class="password-input">
-                <input style="font-size: x-large; margin-top: 250px;" type="password" class="form-control" name="{{ registration.password2.name }}" id="confirm_password" required>
+                <input style="font-size: large; margin-top: 250px;height:40px;" type="password" class="form-control" name="{{ registration.password2.name }}" id="confirm_password" required>
             </div>
         
             <input class="signin-button-container" type="submit" value="Sign Up" style="font-family: sans-serif; font-weight: 700; background-color:#0062E3;color: white; font-weight: 300; margin-top: 100px; font-size: x-large; margin-left: -5px;">
