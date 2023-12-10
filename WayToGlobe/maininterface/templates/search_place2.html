@@ -1,48 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2.1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datepickerjs@1.0.1/dist/datepicker.min.css">
+    <title>Loading Screen</title>
+    <style>
+    
+        body {
+            margin-left:120px;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #05203C;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 600;
+            z-index: 9999;
+        }
+
+        .loading-bar {
+            width: 50%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 0;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 10px;
+            transition: width 3s ease-in-out;
+        }
+
+        .content {
+            /* Your existing content styles go here */
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+        }
+        .dropbtn {
+    background-color: rgba(5, 32, 60, 0.80);
+    border-radius: 20px;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+        border-radius: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+        border-radius: 20px;
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+        border-radius: 20px;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #05203C;}
+    .clickable {
+            cursor: pointer;
+        }
+        .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color:  #05203C;
+  color: white;
+}
+    </style>
 </head>
-<div style="width: 1920px; height: 1080px; position: relative">
-    <div style="width: 1442.94px; height: 920.90px; left: 224px; top: 145px; position: absolute; background: #05203C; border-radius: 20px"></div>
-    <div style="width: 247.36px; height: 79.02px; left: 1382px; top: 955px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
-    <div style="width: 72px; height: 22px; left: 1470px; top: 979px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">Next</div>
-    <div style="width: 675px; height: 686px; left: 954px; top: 244px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
-    <div style="width: 279px; height: 35px; left: 902px; top: 863px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">No Wifi</div>
-    <img style="width: 53px; height: 37px; left: 1193px; top: 861px; position: absolute" src="https://via.placeholder.com/53x37" />
-    <div style="width: 280px; height: 35px; left: 941px; top: 804px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free parking</div>
-    <img style="width: 52px; height: 41px; left: 1194px; top: 804px; position: absolute" src="https://via.placeholder.com/52x41" />
-    <div style="width: 279px; height: 35px; left: 960px; top: 751px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Price: Rs 8,000</div>
-    <div style="width: 326px; height: 42px; left: 985px; top: 689px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Arif Hotel, Karachi</div>
-    <div style="width: 1884.66px; height: 107.47px; left: 0px; top: 0px; position: absolute; background: rgba(108, 112, 122, 0.30)"></div>
-    <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
-    <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
-    <div style="width: 45.15px; height: 37.93px; left: 35.34px; top: 132.76px; position: absolute; background: black"></div>
-    <div style="width: 1884.69px; height: 0px; left: 2.94px; top: 107.47px; position: absolute; border: 2px black solid"></div>
-    <div style="width: 224.79px; height: 34.77px; left: 1695.21px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Settings</div>
-    <div style="width: 273.87px; height: 34.77px; left: 119.75px; top: 37.93px; position: absolute; color: black; font-size: 30px; font-family: Impact; font-weight: 400; word-wrap: break-word">Way To Globe</div>
-    <div style="width: 127.61px; height: 34.77px; left: 459.39px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Home</div>
-    <div style="width: 264.05px; height: 34.77px; left: 802.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Flight</div>
-    <div style="width: 215.95px; height: 34.77px; left: 589.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Place</div>
-    <div style="width: 215.95px; height: 34.77px; left: 1215.21px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">About Us</div>
-    <div style="width: 235.58px; height: 34.77px; left: 1023.80px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Car</div>
-    <div style="width: 79.51px; height: 75.86px; left: 22.58px; top: 16.86px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
-    <div style="width: 90.31px; height: 25.29px; left: 16.69px; top: 41.09px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Imprima; font-weight: 400; word-wrap: break-word">Logo</div>
-    <div style="width: 58.90px; height: 57.95px; left: 1679.51px; top: 26.34px; position: absolute; background: black"></div>
-    <div style="width: 674px; height: 686px; left: 265px; top: 239px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
-    <div style="width: 279px; height: 35px; left: 224px; top: 858px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free Wifi</div>
-    <img style="width: 54px; height: 37px; left: 503px; top: 856px; position: absolute" src="https://via.placeholder.com/54x37" />
-    <div style="width: 279px; height: 35px; left: 252px; top: 800px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free parking</div>
-    <img style="width: 53px; height: 40px; left: 504px; top: 800px; position: absolute" src="https://via.placeholder.com/53x40" />
-    <div style="width: 279px; height: 35px; left: 278px; top: 744px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Price: Rs 11,000</div>
-    <div style="width: 324px; height: 41px; left: 296px; top: 685px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">PC Hotel, Lahore</div>
-    <img style="width: 645px; height: 392px; left: 278px; top: 257px; position: absolute; border-radius: 30px" src="https://via.placeholder.com/645x392" />
-    <img style="width: 588px; height: 392px; left: 985px; top: 256px; position: absolute; border-radius: 30px" src="https://via.placeholder.com/588x392" />
-    <div style="width: 247.36px; height: 79.02px; left: 676px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
-    <div style="width: 72px; height: 22px; left: 764px; top: 845px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">Book</div>
-    <div style="width: 247.36px; height: 79.02px; left: 1326px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
-    <div style="width: 72px; height: 22px; left: 1414px; top: 841px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">Book</div>
-    <div style="width: 36px; height: 0px; left: 1573px; top: 995px; position: absolute; border: 3px black solid"></div>
-  </div>
+<body>
+    <!-- <div class="loading-container">
+        <div>Loading...</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+    </div> -->
+
+    <div class="content">
+
+        <div style="width: 1920px; height: 1080px; position: relative">
+            {% load static %}
+            <div style="width: 1442.94px; height: 920.90px; left: 224px; top: 145px; position: absolute; background: #05203C; border-radius: 20px"></div>
+          
+
+            <div style="width: 675px; height: 686px; left: 954px; top: 244px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
+            <div style="width: 279px; height: 35px; left: 902px; top: 863px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">No Wifi</div>
+            <img style="width: 53px; height: 37px; left: 1193px; top: 861px; position: absolute" src="{% static 'wifi.png' %}" />
+            <div style="width: 280px; height: 35px; left: 941px; top: 804px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free parking</div>
+            <img style="width: 52px; height: 41px; left: 1194px; top: 804px; position: absolute" src="{% static 'park.png' %}" />
+            <div style="width: 279px; height: 35px; left: 960px; top: 751px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Price: Rs 8,000</div>
+            <div style="width: 326px; height: 42px; left: 985px; top: 689px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Arif Hotel, Karachi</div>
+            <div style="width: 1884.66px; height: 107.47px; left: 0px; top: 0px; position: absolute; background: rgba(108, 112, 122, 0.30)"></div>
+            <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
+            <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
+
+            <div style="width: 1884.69px; height: 0px; left: 2.94px; top: 107.47px; position: absolute; border: 2px black solid"></div>
+            <div style="width: 224.79px; height: 34.77px; left: 1695.21px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Settings</div>
+            <div style="width: 273.87px; height: 34.77px; left: 119.75px; top: 37.93px; position: absolute; color: black; font-size: 30px; font-family: Impact; font-weight: 400; word-wrap: break-word">Way To Globe</div>
+            <div style="width: 127.61px; height: 34.77px; left: 459.39px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Home</div>
+            <div style="width: 264.05px; height: 34.77px; left: 802.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Flight</div>
+            <div style="width: 215.95px; height: 34.77px; left: 589.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Place</div>
+            <div style="width: 215.95px; height: 34.77px; left: 1215.21px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">About Us</div>
+            <div style="width: 235.58px; height: 34.77px; left: 1023.80px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Car</div>
+            <div style="width: 79.51px; height: 75.86px; left: 22.58px; top: 16.86px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+            <div style="width: 90.31px; height: 25.29px; left: 16.69px; top: 41.09px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Imprima; font-weight: 400; word-wrap: break-word">Logo</div>
+
+            <div style="width: 674px; height: 686px; left: 265px; top: 239px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
+            <div style="width: 279px; height: 35px; left: 224px; top: 858px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free Wifi</div>
+            <img style="width: 54px; height: 37px; left: 503px; top: 856px; position: absolute" src="{% static 'wifi.png' %}" />
+            <div style="width: 279px; height: 35px; left: 252px; top: 800px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free parking</div>
+            <img style="width: 53px; height: 40px; left: 504px; top: 800px; position: absolute" src="{% static 'park.png' %}" />
+            <div style="width: 279px; height: 35px; left: 278px; top: 744px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Price: Rs 11,000</div>
+            <div style="width: 324px; height: 41px; left: 296px; top: 685px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">PC Hotel, Lahore</div>
+
+            <img style="width: 645px; height: 392px; left: 278px; top: 257px; position: absolute; border-radius: 30px" src="{% static 'hotel1.avif' %}" />
+            <img style="width: 588px; height: 392px; left: 985px; top: 256px; position: absolute; border-radius: 30px" src="{% static 'hotel2.avif' %}" />
+            <div style="width: 247.36px; height: 79.02px; left: 676px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
+            <div style="width: 72px; height: 22px; left: 764px; top: 845px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">Book</div>
+            <div style="width: 247.36px; height: 79.02px; left: 1326px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
+            <div style="width: 72px; height: 22px; left: 1414px; top: 841px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">Book</div>
+            <div class="dropdown" style="margin-left:1500px;margin-top:20px;" >
+                <img src="{% static 'set.png' %}" alt="Settings Image" style="height: 50px; width: 60px;">  
+                <button class="dropbtn" style="width:300px;">Settings</button>   
+                <div class="dropdown-content" style="width:300px;margin-left:65px;">     
+                    <a href="{% url 'login'%}">Logout</a>
+                    <a href="{% url 'signup'%}">Account</a>
+                    <a href="{% url 'login'%}">Themes</a>
+                </div>
+            </div>
+            <div class="topnav" style="max-width:10%;">
+                <a href="#home"  style="margin-left:100px;"></a>
+                <div id="myLinks" style="margin-top:15px;height:1000px;">
+                  <a href="#news" style="margin-top:50px;font-size: x-large;">News</a>
+                  <a href="#contact" style="margin-top:50px;font-size: x-large;">Contact</a>
+                  <a href="#about" style="margin-top:50px;font-size: x-large;">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars" style="font-size: x-large; position: relative;top:-15px;left: -150px;margin-left: 150px;">☰</i>
+                </a>
+              </div>
+          </div>
+         
+    </div>
+  <script>
+    // Simulate loading progress
+    function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    document.addEventListener("DOMContentLoaded", function () {
+            let progress = 0;
+            const progressBar = document.getElementById("loadingProgress");
+
+            function updateProgress() {
+                progress++;
+                progressBar.style.width = `${progress}%`;
+
+                if (progress < 100) {
+                    setTimeout(updateProgress, 20); // Adjust the timeout for smoother animation
+                } else {
+                    // Remove the loading screen after 3 seconds
+                    setTimeout(() => {
+                        document.querySelector('.loading-container').style.display = 'none';
+                    }, 3000);
+                }
+            }
+
+            updateProgress();
+    });
+</script>
+</body>
+</html>

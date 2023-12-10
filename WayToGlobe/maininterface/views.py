@@ -9,3 +9,5 @@ def searchcar_view(request):
     return render(request, 'search_car.html')
 def searchplace_view(request):
     return render(request, 'search_place.html')
+def searchplace_view2(request):
+    return render(request, 'search_place2.html')
