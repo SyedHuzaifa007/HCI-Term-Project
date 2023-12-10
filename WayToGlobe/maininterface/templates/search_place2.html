@@ -142,39 +142,41 @@
     </style>
 </head>
 <body>
-    <div class="loading-container">
+    <!-- <div class="loading-container">
         <div>Loading...</div>
         <div class="loading-bar">
             <div class="loading-progress" id="loadingProgress"></div>
         </div>
-    </div>
+    </div> -->
 
     <div class="content">
 
         <div style="width: 1920px; height: 1080px; position: relative">
             {% load static %}
-            <div style="width: 1442.94px; height: 920.90px; left: 224px; top: 145px; position: absolute; background: #05203C; border-radius: 20px"></div>
+            <div style="width: 1442.94px; height: 920.90px; left: 224px; top: 135px; position: absolute; background: #05203C; border-radius: 20px"></div>
           
 
-            <div style="width: 675px; height: 686px; left: 954px; top: 244px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
+            <div style="width: 675px; height: 686px; left: 954px; top: 254px; position: absolute; background: rgba(0, 64.22, 148.75, 0.50); border-radius: 20px"></div>
             <div style="width: 279px; height: 35px; left: 902px; top: 863px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">No Wifi</div>
             <img style="width: 53px; height: 37px; left: 1193px; top: 861px; position: absolute" src="{% static 'wifi.png' %}" />
             <div style="width: 280px; height: 35px; left: 941px; top: 804px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Free parking</div>
             <img style="width: 52px; height: 41px; left: 1194px; top: 804px; position: absolute" src="{% static 'park.png' %}" />
             <div style="width: 279px; height: 35px; left: 960px; top: 751px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Price: Rs 8,000</div>
-            <div style="width: 326px; height: 42px; left: 985px; top: 689px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Arif Hotel, Karachi</div>
-            <div style="width: 1884.66px; height: 107.47px; left: 0px; top: 0px; position: absolute; background: rgba(108, 112, 122, 0.30)"></div>
+            <div style="width: 326px; height: 42px; left: 985px; top: 689px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Arif Hotel, Lahore</div>
+            <div style="width: 2214.66px; height: 107.47px; left: -200px; top: 0px; position: absolute; background: rgba(108, 112, 122, 0.30)"></div>
             <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
             <div style="width: 337.67px; height: 72.70px; left: 791px; top: 183px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">Available Places </div>
 
-            <div style="width: 1884.69px; height: 0px; left: 2.94px; top: 107.47px; position: absolute; border: 2px black solid"></div>
-            <div style="width: 224.79px; height: 34.77px; left: 1695.21px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Settings</div>
+            <div style="width:2214.66px; height: 0px; left: -200px; top: 107.47px; position: absolute; border: 2px black solid"></div>
+            <div style="width: 224.79px; height: 34.77px; left: 1695.21px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word"></div>
             <div style="width: 273.87px; height: 34.77px; left: 119.75px; top: 37.93px; position: absolute; color: black; font-size: 30px; font-family: Impact; font-weight: 400; word-wrap: break-word">Way To Globe</div>
-            <div style="width: 127.61px; height: 34.77px; left: 459.39px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Home</div>
+            <div style="width: 127.61px; height: 34.77px; left: 459.39px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">
+                <a href="{% url 'main_interface' %}" style="color:black">Home</a></div>
             <div style="width: 264.05px; height: 34.77px; left: 802.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Flight</div>
             <div style="width: 215.95px; height: 34.77px; left: 589.94px; top: 34.77px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Place</div>
             <div style="width: 215.95px; height: 34.77px; left: 1215.21px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">About Us</div>
-            <div style="width: 235.58px; height: 34.77px; left: 1023.80px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">Search Car</div>
+            <div style="width: 235.58px; height: 34.77px; left: 1023.80px; top: 31.61px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Inder; font-weight: 400; word-wrap: break-word">
+                <a href="{% url 'search_car' %}" style="color:black">Search Car</a></div>
             <div style="width: 79.51px; height: 75.86px; left: 22.58px; top: 16.86px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
             <div style="width: 90.31px; height: 25.29px; left: 16.69px; top: 41.09px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Imprima; font-weight: 400; word-wrap: break-word">Logo</div>
 
@@ -190,10 +192,10 @@
             <img style="width: 588px; height: 392px; left: 985px; top: 256px; position: absolute; border-radius: 30px" src="{% static 'hotel2.avif' %}" />
             <div style="width: 247.36px; height: 79.02px; left: 676px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
             <div style="width: 72px; height: 22px; left: 764px; top: 845px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">
-                <a href="https://pchotels.com">Book</a></div>
+                <a href="https://pchotels.com" style="color: WHITE;">Book</a></div>
             <div style="width: 247.36px; height: 79.02px; left: 1326px; top: 823px; position: absolute; background: rgba(0, 110.09, 255, 0.33); border-radius: 7px; border: 3px black solid"></div>
             <div style="width: 72px; height: 22px; left: 1414px; top: 841px; position: absolute; color: white; font-size: 28px; font-family: Inter; font-weight: 700; text-transform: capitalize; word-wrap: break-word">
-                <a href="https://waze.com/live-map/directions/pk/punjab/lahore/arif-hotel?to=place.ChIJQfitD5wcGTkRvzyz1Bpi_nw">Book</a></div>
+                <a href="https://waze.com/live-map/directions/pk/punjab/lahore/arif-hotel?to=place.ChIJQfitD5wcGTkRvzyz1Bpi_nw" style="color: WHITE;">Book</a></div>
             <div class="dropdown" style="margin-left:1500px;margin-top:20px;" >
                 <img src="{% static 'set.png' %}" alt="Settings Image" style="height: 50px; width: 60px;">  
                 <button class="dropbtn" style="width:300px;">Settings</button>   
@@ -203,7 +205,7 @@
                     <a href="{% url 'login'%}">Themes</a>
                 </div>
             </div>
-            <div class="topnav" style="max-width:10%;">
+            <div class="topnav" style="max-width:10%;margin-top: 20px;">
                 <a href="#home"  style="margin-left:100px;"></a>
                 <div id="myLinks" style="margin-top:15px;height:1000px;">
                     <a href="#news" style="margin-top:50px;font-size: x-large;">Cheap Rides to Lahore</a>
