@@ -37,7 +37,8 @@ def forgot(request):
         if form.is_valid():
             return render(request, 'password_reset_done.html', {})
     else:
-        return render(request, 'signup.html', {'form': form})
-        form = PasswordResetForm()
+         return render(request, 'signup.html', {'form': form})
+        
+    form = PasswordResetForm()
 
     return render(request, 'password_reset.html', {'form': form}) 
