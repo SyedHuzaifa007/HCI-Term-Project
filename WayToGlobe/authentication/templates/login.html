@@ -2,53 +2,317 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+        }
+
+        .blue-background {
+            width: 990px;
+            height: 1135px;
+            left: 1161px;
+            top: 0;
+            position: absolute;
+            background: #05203C;
+        }
+
+        .signup-container {
+            width: 408px;
+            height: 412px;
+            left: 1336px;
+            top: 306px;
+            position: absolute;
+        }
+
+        .new-here {
+            width: 680px;
+            height: 157px;
+            left: 0;
+            top: 50px;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .signup-text {
+            width: 680px;
+            height: 200px;
+            left: 0;
+            top: 169px;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 27px;
+            font-family: Inter, sans-serif;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .signup-button-container {
+            width: 330px;
+            height: 67px;
+            left: 180px;
+            top: 300px;
+            position: absolute;
+            background: #D9D9D9;
+        }
+
+        .signup-button {
+            width: 330px;
+            height: 67px;
+            left: 0px;
+            top: 20px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .login-container {
+            width: 586px;
+            height: 597px;
+            left: 287px;
+            top: 261px;
+            position: absolute;
+        }
+
+        .login-title {
+            width: 586px;
+            height: 83px;
+            left: 0;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 40px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .social-login {
+            width: 438px;
+            height: 33px;
+            left: 67px;
+            top: 80px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+
+        .email-label {
+            width: 252px;
+            height: 39px;
+            left: 20px;
+            top: 227px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+
+        .email-input {
+            width:360px;
+            height: 39px;
+            left: 20px;
+            top: 266px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+
+        .password-label {
+            width: 252px;
+            height: 39px;
+            left: 36px;
+            top: 358px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+
+        .password-input {
+            width: 334px;
+            height: 46px;
+            left: 119px;
+            top: 407px;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            display: inline-flex;
+        }
+
+        .separator {
+            width: 331px;
+            height: 0px;
+            border: 1px black solid;
+        }
+
+        .signin-button-container {
+            width: 330px;
+            height: 67px;
+            left: 124px;
+            top: 487px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+        }
+
+        .signin-button {
+            width: 330px;
+            height: 57px;
+            margin-top: 300px;
+            margin-left:120px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+            background: #0062E3;
+        
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            border-radius: 9999px;
+        }
+
+        .social-icon:first-child {
+            left: 218px;
+            top: 129px;
+        }
+
+        .social-icon:last-child {
+            left: 312px;
+            top: 129px;
+        }
+
+        .divider {
+            width: 142px;
+            height: 0px;
+            position: absolute;
+            border: 1px black solid;
+        }
+
+        .or-text {
+            width: 30px;
+            height: 31px;
+            left: 276px;
+            top: 197px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+
+        .forgot-password {
+            width: 206px;
+            height: 27px;
+            left: 276px;
+            top: 570px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            text-align: center;
+            color: #353535;
+            font-size: 18px;
+            font-family: Inter, sans-serif;
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+        .form-control
+        {
+            height:50px;
+            width:330px;
+            margin-left:100px;
+      
+        }
+    </style>
 </head>
 <body>
-    <div style="width: 100%; height: 100%; position: relative; background: white" >
-        <div style="width: 990px; height: 1135px; left: 1161px; top: 0px; position: absolute; background: #05203C"></div>
-        <div style="width: 408px; height: 412px; left: 1336px; top: 306px; position: absolute">
-            <div style="width: 680px; height: 157px; left: 0px; top: 50px; position: absolute; text-align: center; color: white; font-size: 50px; font-family: Inter; font-weight: 700; word-wrap: break-word">New Here?</div>
-            <div style="width: 680px; height: 200px; left: 0px; top: 169px; position: absolute; text-align: center; color: white; font-size: 27px; font-family: Inter; font-weight: 500; word-wrap: break-word">Sign up and discover a great amount of new opportunities!</div>
-            <div style="width: 330px; height: 67px; left: 180px; top: 300px; position: absolute; background: #D9D9D9"></div>
-            <div style="width: 330px; height: 67px; left: 180px; top: 320px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word">Sign up</div>
-        </div>
-        <div style="width: 586px; height: 597px; left: 287px; top: 261px; position: absolute">
-            <div style="width: 252px; height: 39px; left: 20px; top: 227px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Email</div>
-            <input>
-            <div style="width: 252px; height: 39px; left: 20px; top: 227px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Email</div>
-        </input style="width: 252px; height: 39px; left: 20px; top: 227px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">
-            <div style="width: 586px; height: 83px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login to Your Account</div>
-            <div style="width: 438px; height: 33px; left: 67px; top: 80px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Login using social networks</div>
-            <div style="width: 252px; height: 39px; left: 20px; top: 227px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Email</div>
-            <div style="width: 252px; height: 39px; left: 36px; top: 358px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">Password</div>
-            <div style="width: 334px; height: 46px; left: 119px; top: 407px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-end; display: inline-flex">
-                <div style="width: 334px; height: 46px; background: rgba(217, 217, 217, 0)"></div>
-                <div style="width: 331px; height: 0px; border: 1px black solid"></div>
+    <div class="container">
+        <div class="blue-background"></div>
+        <div class="signup-container">
+            <div class="new-here">New Here?</div>
+            <div class="signup-text">Sign up and discover a great amount of new opportunities!</div>
+            <div class="signup-button-container">
+                <div class="signup-button"><a href="{% url 'signup' %}">Sign up</a></div>
             </div>
-            <form method="post">
-                {% csrf_token %}
-            <div style="width: 330px; height: 67px; left: 124px; top: 487px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 330px; height: 90px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                    <div style="width: 330px; height: 330px;  background: #0062E3"></div>
-                    <div style="width: 330px; height: 67px; top: 487px; text-align: center; color: white; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word">Sign in</div>
+        </div>
+        <div class="login-container">
+            <div class="login-title">Login to Your Account</div>
+            <div class="social-login">Login using social networks</div>
+            <div class="separator" style="width: 334px; height: 46px; left: 407px; top: 527px;margin-top: 130px;margin-left:120px;">
+                {% load static %}
+            <img class="social-icon" src="{% static 'fb.png' %}" alt="Social Icon 1">
+            <div class="divider" style="left: 123.98px; top: 209.50px;"></div>
+            <div class="divider" style="left: 312px; top: 210.55px;"></div>
+            <div class="or-text">OR</div>
+            <img class="social-icon" src="https://via.placeholder.com/48x48" alt="Social Icon 2">
+        </div>
+        <form method="POST" action="{% url 'login' %}" autocomplete="off">
+            {% csrf_token  %}
+            <div class="email-label">Email</div>
+            <div class="email-input">
+                <input  style="font-size:x-large" type="text"  class="form-control" name="{{ loginform.username.name }}" id="Username" required>
+            </div>
+            <div class="password-label">Password</div>
+            <div class="password-input">
+                <input  style="font-size:x-large" type="password"  class="form-control" name="{{ loginform.password.name }}" id="Username" required></div>
+       
+                <div class="forgot-password"><a href="{% url 'password_reset' %}">Forgot Password?</a></div>
+              
+              
                 </div>
-            </form>
-            </div>
-            <img style="width: 48px; height: 48px; left: 218px; top: 129px; position: absolute; border-radius: 9999px" src="https://via.placeholder.com/48x48" />
-            <img style="width: 48px; height: 48px; left: 312px; top: 129px; position: absolute" src="https://via.placeholder.com/48x48" />
-            <div style="width: 142px; height: 0px; left: 123.98px; top: 209.50px; position: absolute; border: 1px black solid"></div>
-            <div style="width: 142px; height: 0px; left: 312px; top: 210.55px; position: absolute; border: 1px black solid"></div>
-            <div style="width: 30px; height: 31px; left: 276px; top: 197px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 300; word-wrap: break-word">OR</div>
-            <div style="width: 206px; height: 27px; left: 276px; top: 570px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 206px; height: 27px; text-align: center; color: #353535; font-size: 18px; font-family: Inter; font-weight: 300; word-wrap: break-word">Forgot Password?</div>
-            </div>
+              
+                <input class="signin-button-container" type="submit" value="Sign in" style="font-family: sans-serif; font-weight: 700; background-color:#0062E3;color: white; font-weight: 300; margin-top: 250px; font-size: x-large; margin-left: 275px;height:60px;width:340px;">
+           
+        </form>
+         
+           
         </div>
-        <div style="width: 334px; height: 46px; left: 407px; top: 527px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-end; display: inline-flex">
-            <div style="width: 334px; height: 46px; background: rgba(217, 217, 217, 0)"></div>
-            <div style="width: 331px; height: 0px; border: 1px black solid"></div>
-        </div>
+       
     </div>
-    
 </body>
 </html>
