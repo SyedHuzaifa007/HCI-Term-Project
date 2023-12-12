@@ -12,9 +12,13 @@ def login_view(request):
             username = request.POST.get('username')
             password = request.POST.get('password')
             user=authenticate(request,username=username,password=password)
-            if user is not None:
+        else:
+             return render(request, 'login.html', {'error': 'Invalid email or password'})
+        
+        if user is not None:
                 auth.login(request,user)
                 return redirect('main_interface')
+           
     context={'loginform':form}
     return render(request, 'login.html',context=context)
 import re
