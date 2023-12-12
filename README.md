@@ -10,12 +10,13 @@
 - For downloading python visit
   - ```https://www.python.org/downloads/windows/``` for Windows
   - ```https://www.python.org/downloads/macos/``` for MacOS
+  - ```https://www.python.org/downloads/source/``` for Linux
 - For installing pip package manager visit
   - ```https://bootstrap.pypa.io/get-pip.py```
-  - Open Windows Powershell or MacOS Terminal
+  - Open Windows Powershell or MacOS/Linux Terminal
   - Navigate to the folder where get-pip.py is downloaded
   - Run ```python get-pip.py``` for windows
-  - Run ```sudo apt-get install python3-pip```
+  - Run ```sudo apt-get install python3-pip``` for MacOS/Linux
   - Update pip by running ```pip install --upgrade pip```
   - Verify the installation by checking the version of pip by running ```pip --version```
 - For installing Django first install ```pip``` and then run the following command
@@ -25,9 +26,9 @@
   - For MacOS run ```brew install git``` in the terminal
   - For Linux run ```sudo apt update``` and then ```sudo apt install git``` in the terminal
 #### To install the application in your system follow these steps:
-- Clone this repository in your system by running the following command in the Powershell (for Windows) and Terminal (For MacOS)
+- Clone this repository in your system by running the following command in the Powershell (for Windows) and Terminal (For MacOS/Linux)
   - ```git clone https://github.com/SyedHuzaifa007/HCI-Term-Project.git```
-- After you clone the repository in your system locate the manage.py file to run the server by following the commands"
+- After you clone the repository in your system locate the **manage.py** file to run the server by following the commands"
   - ```cd HCI-Term-Project```
   - ```cd WayToGlobe```
   - ```python manage.py runserver```
