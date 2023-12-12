@@ -20,7 +20,10 @@
   - Verify the installation by checking the version of pip by running ```pip --version```
 - For installing Django first install ```pip``` and then run the following command
   - ```pip install django```
-- For downloading Git visit 
+- For downloading Git
+  - visit ```https://gitforwindows.org/``` for windows
+  - For MacOS run ```brew install git``` in the terminal
+  - For Linux run ```sudo apt update``` and then ```sudo apt install git``` in the terminal
 #### To install the application in your system follow these steps:
 - Clone this repository in your system by running the following command in the Powershell (for Windows) and Terminal (For MacOS)
   - ```git clone https://github.com/SyedHuzaifa007/HCI-Term-Project.git```
